@@ -62,5 +62,6 @@ while True:
         uname = match.rsplit("#", 1)[0]
         if r.change_username(uname, info.get("password")):
             r.change_username(ogname, info.get("password"))
+    currinfo = r.get_info();
     print(f"Current place: {currinfo['username']}#{currinfo['discriminator']}")
     sleep(60*60)
